@@ -95,6 +95,7 @@
             android:drawablePadding="8.dp"
             android:fontFamily="@font/ibm_regular_plex_sans_arabic"
             android:hint="Search about tom ..."
+            android:lines="1"
             android:padding="16.dp"
             android:textColorHint="#969799"
             android:textSize="14.sp"
