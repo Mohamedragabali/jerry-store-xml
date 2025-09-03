@@ -1,19 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEF4F6"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/account_image"
+            android:layout_width="48.dp"
+            android:layout_height="48.dp"
+            android:layout_marginStart="16.dp"
+            android:layout_marginTop="40.dp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <!-- header-->
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.dp"
+            android:layout_marginEnd="16.dp"
+            android:fontFamily="@font/ipm_mediem_sens_arabic"
+            android:text="Hi, Jerry 👋🏻"
+            android:textColor="#1F1F1E"
+            android:textSize="14.sp"
+            app:layout_constraintEnd_toStartOf="@+id/notification_icon"
+            app:layout_constraintStart_toEndOf="@+id/account_image"
+            app:layout_constraintTop_toTopOf="@id/account_image" />
+
+        <TextView
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_regular_plex_sans_arabic"
+            android:text="Which Tom do you want to buy?"
+            android:textColor="#A5A6A4"
+            android:textSize="12.sp"
+            app:layout_constraintEnd_toEndOf="@id/welcome_message"
+            app:layout_constraintStart_toStartOf="@+id/welcome_message"
+            app:layout_constraintTop_toBottomOf="@id/welcome_message" />
+
+        <LinearLayout
+            android:id="@+id/notification_icon"
+            android:layout_width="40.dp"
+            android:layout_height="40.dp"
+            android:layout_marginEnd="16.dp"
+            android:background="@drawable/strock_rectangle"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/account_image">
+
+            <ImageView
+                android:layout_width="24.dp"
+                android:layout_height="24.dp"
+                android:src="@drawable/notification_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/account_image" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="14.dp"
+            android:layout_height="14.dp"
+            android:layout_marginStart="27.dp"
+            android:layout_marginBottom="30.dp"
+            android:background="@drawable/blue_circle"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="10.sp"
+            app:layout_constraintBottom_toBottomOf="@id/notification_icon"
+            app:layout_constraintStart_toStartOf="@id/notification_icon" />
+
+        <!-- header-->
+
+        <!-- search field -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search_input_field"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12.dp"
+            android:layout_marginEnd="8.dp"
+            android:background="@drawable/rectangle_with_corner"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="8.dp"
+            android:fontFamily="@font/ibm_regular_plex_sans_arabic"
+            android:hint="Search about tom ..."
+            android:padding="16.dp"
+            android:textColorHint="#969799"
+            android:textSize="14.sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_image"
+            app:layout_constraintEnd_toStartOf="@+id/sittings"/>
+
+        <LinearLayout
+            android:id="@+id/sittings"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16.dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:background="@drawable/color_rectangle_with_radius"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/search_input_field"
+            app:layout_constraintBottom_toBottomOf="@id/search_input_field">
+
+            <ImageView
+                android:layout_width="19.5dp"
+                android:layout_height="17.5dp"
+                android:src="@drawable/sitting_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/account_image" />
+        </LinearLayout>
+        <!-- search field -->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

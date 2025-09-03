@@ -6,4 +6,16 @@
     </style>
 
     <style name="Theme.JerryStore" parent="Base.Theme.JerryStore" />
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="stroke" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+        <item name="strokeColor">#1FD20E63</item>
+        <item name="strokeWidth">5dp</item>
+    </style>
 </resources>
