@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Jerry Store</string>
+    <string name="strike_text"><strike>5</strike></string>
 </resources>

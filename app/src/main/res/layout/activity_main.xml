@@ -10,7 +10,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="16.dp"
+        >
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/account_image"
@@ -128,7 +130,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/offer_card"
             android:layout_width="match_parent"
-            android:layout_height="92.dp"
+            android:layout_height="96.dp"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24.dp"
             android:background="@drawable/rectangle_with_gradient"
@@ -153,20 +155,22 @@
 
         <TextView
             android:id="@+id/offer_text_description"
-            android:layout_width="wrap_content"
+            android:layout_width="0.dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8.dp"
-            android:lines="1"
+            android:lines="2"
             android:textSize="12.sp"
+            android:layout_marginEnd="24.dp"
             android:fontFamily="@font/ibm_regular_plex_sans_arabic"
             android:text="Adopt Tom! (Free Fail-Free Guarantee)"
             android:textColor="#CCFFFFFF"
             app:layout_constraintStart_toStartOf="@id/offer_text"
+            app:layout_constraintEnd_toEndOf="@id/offer_text"
             app:layout_constraintTop_toBottomOf="@id/offer_text" />
 
         <ImageView
             android:layout_width="120.dp"
-            android:layout_height="112.dp"
+            android:layout_height="117.dp"
             android:layout_marginTop="4.dp"
             android:src="@drawable/tom_money"
             app:layout_constraintEnd_toEndOf="@id/offer_card"
@@ -216,6 +220,617 @@
 
 
         <!-- Cheap tom section -->
+
+
+        <!-- first two item -->
+        <View
+            android:id="@+id/first_item"
+            android:layout_width="0.dp"
+            android:layout_height="219.dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toBottomOf="@id/section_name"
+            android:layout_marginEnd="8.dp"
+            android:layout_marginStart="16.dp"
+            android:layout_marginTop="32.dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/second_item"/>
+        <ImageView
+            android:id="@+id/first_item_image"
+            android:layout_width="0.dp"
+            android:layout_height="100.dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/first_item"
+            android:src="@drawable/tom_eat"
+            app:layout_constraintStart_toStartOf="@id/first_item"
+            app:layout_constraintEnd_toEndOf="@id/first_item"
+            android:layout_marginBottom="135.dp"/>
+        <TextView
+            android:id="@+id/first_item_title"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:text="Sport Tom"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18.sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/first_item_image"
+            app:layout_constraintStart_toStartOf="@id/first_item"
+            app:layout_constraintEnd_toEndOf="@id/first_item"
+            android:gravity="center"
+            android:layout_marginHorizontal="8.dp"/>
+        <TextView
+            android:id="@+id/first_item_des"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:text="He runs 1 meter... trips over his boot."
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12.sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/first_item_title"
+            app:layout_constraintStart_toStartOf="@id/first_item"
+            app:layout_constraintEnd_toEndOf="@id/first_item"
+            android:gravity="center"
+            android:layout_marginHorizontal="8.dp"/>
+        
+        <LinearLayout
+            android:id="@id/price"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8.dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10.dp"
+            android:paddingVertical="6.dp"
+            app:layout_constraintStart_toStartOf="@id/first_item"
+            app:layout_constraintEnd_toStartOf="@id/bag"
+            app:layout_constraintBottom_toBottomOf="@id/first_item">
+            <ImageView
+                android:layout_width="20.dp"
+                android:layout_height="20.dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2.dp"/>
+            <TextView
+                android:id="@+id/price_before_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strike_text"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12.sp"
+                />
+            <TextView
+                android:id="@+id/price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 3 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12.sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bag"
+            android:layout_width="40.dp"
+            android:layout_height="0.dp"
+            android:layout_marginEnd="8.dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/price"
+            app:layout_constraintBottom_toBottomOf="@id/price"
+            app:layout_constraintEnd_toEndOf="@id/first_item">
+
+            <ImageView
+                android:layout_width="16.dp"
+                android:layout_height="16.dp"
+                android:src="@drawable/add_to_cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/account_image" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/second_item"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toTopOf="@id/first_item"
+            app:layout_constraintStart_toEndOf="@+id/first_item"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/second_item_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/second_item"
+            android:src="@drawable/tom_lover"
+            app:layout_constraintStart_toStartOf="@id/second_item"
+            app:layout_constraintEnd_toEndOf="@id/second_item"
+            android:layout_marginBottom="135dp"/>
+
+        <TextView
+            android:id="@+id/second_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tom the lover"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/second_item_image"
+            app:layout_constraintStart_toStartOf="@id/second_item"
+            app:layout_constraintEnd_toEndOf="@id/second_item"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/second_item_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="He loves one-sidedly... and is beaten by the other side."
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/second_item_title"
+            app:layout_constraintStart_toStartOf="@id/second_item"
+            app:layout_constraintEnd_toEndOf="@id/second_item"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/second_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="@id/second_item"
+            app:layout_constraintEnd_toStartOf="@id/second_bag"
+            app:layout_constraintBottom_toBottomOf="@id/second_item">
+
+            <ImageView
+                android:layout_width="20.dp"
+                android:layout_height="20.dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2.dp"/>
+
+            <TextView
+                android:id="@+id/second_price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_bag"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/second_price"
+            app:layout_constraintBottom_toBottomOf="@id/second_price"
+            app:layout_constraintEnd_toEndOf="@id/second_item">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add_to_cart" />
+        </LinearLayout>
+
+
+        <!-- first two item -->
+
+        <!-- Second row - first item -->
+        <View
+            android:id="@+id/first_item_row2"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toBottomOf="@id/first_item"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/second_item_row2"/>
+
+        <ImageView
+            android:id="@+id/first_item_row2_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row2"
+            android:src="@drawable/tom_the_bomb"
+            app:layout_constraintStart_toStartOf="@id/first_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row2"
+            android:layout_marginBottom="135dp"/>
+
+        <TextView
+            android:id="@+id/first_item_row2_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tom the bomb"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/first_item_row2_image"
+            app:layout_constraintStart_toStartOf="@id/first_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row2"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/first_item_row2_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="He blows himself up before Jerry can catch him."
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/first_item_row2_title"
+            app:layout_constraintStart_toStartOf="@id/first_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row2"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/first_item_row2_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="@id/first_item_row2"
+            app:layout_constraintEnd_toStartOf="@id/first_item_row2_bag"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row2">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2dp"/>
+
+
+            <TextView
+                android:id="@+id/first_item_row2_price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_item_row2_bag"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/first_item_row2_price"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row2_price"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row2">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add_to_cart" />
+        </LinearLayout>
+
+
+        <!-- Second row - second item -->
+        <View
+            android:id="@+id/second_item_row2"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toTopOf="@id/first_item_row2"
+            app:layout_constraintStart_toEndOf="@+id/first_item_row2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/second_item_row2_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row2"
+            android:src="@drawable/spy_tom"
+            app:layout_constraintStart_toStartOf="@id/second_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row2"
+            android:layout_marginBottom="135dp"/>
+
+        <TextView
+            android:id="@+id/second_item_row2_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Spy Tom"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/second_item_row2_image"
+            app:layout_constraintStart_toStartOf="@id/second_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row2"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/second_item_row2_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Disguises itself as a table."
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/second_item_row2_title"
+            app:layout_constraintStart_toStartOf="@id/second_item_row2"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row2"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/second_item_row2_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="@id/second_item_row2"
+            app:layout_constraintEnd_toStartOf="@id/second_item_row2_bag"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row2">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2dp"/>
+
+            <TextView
+                android:id="@+id/second_item_row2_price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_item_row2_bag"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/second_item_row2_price"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row2_price"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row2">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add_to_cart" />
+        </LinearLayout>
+
+        <!-- Third row - first item -->
+        <View
+            android:id="@+id/first_item_row3"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toBottomOf="@id/first_item_row2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/second_item_row3"/>
+
+        <ImageView
+            android:id="@+id/first_item_row3_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row3"
+            android:src="@drawable/frozen_tom"
+            app:layout_constraintStart_toStartOf="@id/first_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row3"
+            android:layout_marginBottom="135dp"/>
+
+        <TextView
+            android:id="@+id/first_item_row3_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Frozen Tom"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/first_item_row3_image"
+            app:layout_constraintStart_toStartOf="@id/first_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row3"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/first_item_row3_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="He was chasing Jerry, he froze after the first look"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/first_item_row3_title"
+            app:layout_constraintStart_toStartOf="@id/first_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row3"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/first_item_row3_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="@id/first_item_row3"
+            app:layout_constraintEnd_toStartOf="@id/first_item_row3_bag"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row3">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2dp"/>
+
+            <TextView
+                android:id="@+id/first_item_row3_price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_item_row3_bag"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/first_item_row3_price"
+            app:layout_constraintBottom_toBottomOf="@id/first_item_row3_price"
+            app:layout_constraintEnd_toEndOf="@id/first_item_row3">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add_to_cart" />
+        </LinearLayout>
+
+
+        <!-- Third row - second item -->
+        <View
+            android:id="@+id/second_item_row3"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_white_color"
+            app:layout_constraintTop_toTopOf="@id/first_item_row3"
+            app:layout_constraintStart_toEndOf="@+id/first_item_row3"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/second_item_row3_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row3"
+            android:src="@drawable/sleaping_tom"
+            app:layout_constraintStart_toStartOf="@id/second_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row3"
+            android:layout_marginBottom="135dp"/>
+
+        <TextView
+            android:id="@+id/second_item_row3_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sleeping Tom"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="18sp"
+            android:textColor="#1F1F1E"
+            app:layout_constraintTop_toBottomOf="@id/second_item_row3_image"
+            app:layout_constraintStart_toStartOf="@id/second_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row3"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/second_item_row3_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="He doesn't chase anyone, he just snores in stereo."
+            android:fontFamily="@font/ibm_plex_sans_arabic_semibold"
+            android:textSize="12sp"
+            android:textColor="#969799"
+            app:layout_constraintTop_toBottomOf="@id/second_item_row3_title"
+            app:layout_constraintStart_toStartOf="@id/second_item_row3"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row3"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/second_item_row3_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="start|center"
+            android:background="@drawable/rectangle_blue_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="@id/second_item_row3"
+            app:layout_constraintEnd_toStartOf="@id/second_item_row3_bag"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row3">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/money_bag"
+                android:layout_marginEnd="2dp"/>
+
+            <TextView
+                android:id="@+id/second_item_row3_price_after_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 cheeses"
+                android:gravity="bottom"
+                android:fontFamily="@font/ipm_mediem_sens_arabic"
+                android:textColor="#03578A"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_item_row3_bag"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/strock_rectangle_blue"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/second_item_row3_price"
+            app:layout_constraintBottom_toBottomOf="@id/second_item_row3_price"
+            app:layout_constraintEnd_toEndOf="@id/second_item_row3">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add_to_cart" />
+        </LinearLayout>
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
